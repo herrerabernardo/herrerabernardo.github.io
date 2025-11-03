@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ley de Hooke</title>
+    <link rel="stylesheet" href="fondo.css">
+</head>
+<body>
+<div class="contenedor">
+  <h1 id="titulo">EXPLICACIÓN DE LA LEY DE HOOKE</h1>
+  <p id="descripcion">
+    La ley de Hooke establece que la fuerza necesaria para deformar un resorte es proporcional a la deformación que sufre, 
+    siempre y cuando no supere el límite de fuerza elástica del material.
+  </p>
+
+  <h2 id="subtitulo">¿DÓNDE VEMOS LA LEY DE HOOKE?</h2>
+
+  <ul id="lista">
+    <li>En los resortes (bolígrafos, colchones, amortiguadores y elásticos de ropa)</li>
+    <li>En los instrumentos usados para medir fuerza (dinamómetros)</li>
+    <li>Instrumentos musicales (los instrumentos de cuerdas al generar sus vibraciones)</li>
+    <li>Trampolines y camas elásticas (la deformación del material es proporcional a la fuerza aplicada)</li>
+  </ul>
+
+  <button onclick="cambiarTexto()">Traducir</button>
+
+  <script>
+    let enEspanol = true; // Estado inicial: está en español
+
+    function cambiarTexto() {
+      const titulo = document.getElementById("titulo");
+      const descripcion = document.getElementById("descripcion");
+      const subtitulo = document.getElementById("subtitulo");
+      const lista = document.getElementById("lista");
+
+      if (enEspanol) {
+        // Cambiar a inglés
+        titulo.textContent = "EXPLANATION OF HOOKE'S LAW";
+        descripcion.textContent = 
+          "Hooke's law establishes that the force necessary to deform a spring is proportional to the deformation it suffers, as long as it does not exceed the elastic force limit of the material.";
+        subtitulo.textContent = "WHERE DO WE SEE HOOKE'S LAW?";
+        lista.innerHTML = `
+          <li>In the springs (pens, mattresses, shock absorbers and clothing elastics)</li>
+          <li>In instruments used to measure force (dynamometers)</li>
+          <li>Musical instruments (string instruments when generating their vibrations)</li>
+          <li>Trampolines and trampolines (the deformation of the material is proportional to the force applied)</li>
+        `;
+      } else {
+        // Volver a español
+        titulo.textContent = "EXPLICACIÓN DE LA LEY DE HOOKE";
+        descripcion.textContent = 
+          "La ley de Hooke establece que la fuerza necesaria para deformar un resorte es proporcional a la deformación que sufre, siempre y cuando no supere el límite de fuerza elástica del material.";
+        subtitulo.textContent = "¿DÓNDE VEMOS LA LEY DE HOOKE?";
+        lista.innerHTML = `
+          <li>En los resortes (bolígrafos, colchones, amortiguadores y elásticos de ropa)</li>
+          <li>En los instrumentos usados para medir fuerza (dinamómetros)</li>
+          <li>Instrumentos musicales (los instrumentos de cuerdas al generar sus vibraciones)</li>
+          <li>Trampolines y camas elásticas (la deformación del material es proporcional a la fuerza aplicada)</li>
+        `;
+      }
+
+      // Alternar estado
+      enEspanol = !enEspanol;
+    }
+  </script>
+  <button class="boton-bonito" onclick="window.location.href='Fisica.html'">
+  </button>
+ </div>
+</body>
+</html>
